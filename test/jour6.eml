@@ -1,0 +1,145 @@
+Delivered-To: yousseflehmam3@gmail.com
+Received: by 2002:a05:7022:e02:b0:68:6523:f8f7 with SMTP id dx2csp2483182dlb;
+        Tue, 18 Jul 2023 06:35:22 -0700 (PDT)
+X-Received: by 2002:a1f:5cc6:0:b0:471:19d6:1ce1 with SMTP id q189-20020a1f5cc6000000b0047119d61ce1mr1617606vkb.11.1689687322021;
+        Tue, 18 Jul 2023 06:35:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1689687322; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DdbKPf5pHkwiUoDXcQnwmXGOdhFuTE5f+lHzATxM5ZSci6usJLpWdgHBDEGPkh22CM
+         u8YIJ5RYbHYwsx/u7tR1vG9CwGHRnps62PTntGkftp98K9guVMGH0oUHkzAp8kycd6I1
+         R+Lxw+4RQD4JAouPK+w5uRfnm9egXW2XOYACCLw9xRxl1J0wGrhm+nGlyGr/mLNuA8Y+
+         OQdDGCdCGG43dSCgj0sjfb8IkWfdCnCkY6x4SBUIHG6Vv/vGvAmfcsavM0+8XMfb7Xb9
+         Adeub9c0GIg+2hRWQn5hSy9/SNmkht59D7V91MspDpx8cCsvmfm5NM/MRMH4e/GK/INv
+         TFqA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=HRh2/VXvsFdHgp0s2PpYsPNmk7FWVoTV3jT2Um2jK/0=;
+        fh=mLJAKEoseQAkCuHHkpBuFuapupcv7QUvtu8nRnCbis4=;
+        b=kN9tEv0p8cvv/Gw7f8J/7Aq3J5w268uy5xmFaY2g3CxVtDs6aVodKVAbTs0EYdgCkP
+         4hYsRV2ClJsSHVjliGjinYcE9XDZnvQ7vAyTFfzudvJvoFVvnxiTI3+rc51XMf1iS44k
+         GLqCBxZeROBSQoKJtAxFCo9wUUoBRXUwm+PzpVM5S6Gz8j4JJzZCvDFbMKWLdaqYzXOJ
+         VCyiet20EcgY60SLzOIymIXaOTVSQhQ9FwLzlmZQ7/LL2wWtmhfEL85GseAWkeN06O15
+         4GNgQ2003A1m3Xsrcs11HdIh4xtxXAUdyz+qQoTtcjJJlxrts3VEYTv+/7fFQ+GrIRXh
+         TyWQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=Al3wPDjt;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <admou3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id r83-20020a1fc156000000b00481528abb38sor392152vkf.2.2023.07.18.06.35.21
+        (Google Transport Security);
+        Tue, 18 Jul 2023 06:35:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=Al3wPDjt;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1689687321; x=1692279321;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=HRh2/VXvsFdHgp0s2PpYsPNmk7FWVoTV3jT2Um2jK/0=;
+        b=Al3wPDjtoL79ZS2JWOQ/A4o/q23m8LbQohpgNK3Ae/BRelhGIBQHxUT/+ETO/KiLJ3
+         6Wcouz2ws+GBN4iU6FGODsfSnezCrOdsj0Siq7Udt9+dVN74FlTM/c/2kcn4SGExaaIh
+         jOns+jHCtGFiyWgeMPkjHrxBX6grnpNJU53/zfaTkWB8l00n1U3Pi/QSjSnH9ymQBcHG
+         VKcJHAYKqppUAo9KW5libTdhYDrvB/WUBhJCt9CWtrGdmAfS+lid111bBarQlDRbWd4Q
+         cKY1L/BU37mdTOpwd+8aSTHtqhfGIRTpjV692bKPJnIVw3EyqlMtZFuNzXX2fIbD8+HC
+         oIAA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1689687321; x=1692279321;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=HRh2/VXvsFdHgp0s2PpYsPNmk7FWVoTV3jT2Um2jK/0=;
+        b=Z/fW68gIbje+Mi8Q30ANsYgDChT6KJoVMBivEULs1rMRmYAyJssCNw7kH8NOqAqeHH
+         NfaG8CKsoOo1pYdQgh11MCrsI4QpjlJ2HpF1HWeNCl7NUxtt1NYW8dJiPDR8IaDtm3XM
+         ID2br5mXcSNArYp4apRXFv4JgYz1Q9kWKwWNBk07YEAHhq13akPToh3dueStzYqijeHK
+         Bdb2tqRuTfrUtpp0xODGNlMcXm78GIMd81rHsyjklOyRDoFlWJq67i1Zrzj/M1y9Ijw8
+         4o4UuSkAZys6XW8lRkHbZAOq7h7XPVrF/0M6n8W7taM+actKwdjeUZXiszT1s3dzyewd
+         93PQ==
+X-Gm-Message-State: ABy/qLYSHLlKWKKkRSIiTKN8rgVWghsTcd40uFgIRYpiIveMHFXaBvLc
+	YcGCFUXsk2gf+YrXqeZhooV76WrtlbKX/uw4vxpzifkDYwtIuw==
+X-Google-Smtp-Source: APBJJlH/pQ1aDu9ENkBfxBVzfQLedBt9Iahr7Egi8PMAqvACa3lsYjONVOXKp3HZirpT91O71BG8bOaC1ZMczcW/fjc=
+X-Received: by 2002:a1f:d586:0:b0:47e:8a9:478c with SMTP id
+ m128-20020a1fd586000000b0047e08a9478cmr1711408vkg.16.1689687320727; Tue, 18
+ Jul 2023 06:35:20 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAAfpJWLcWzLXpkD95PeO8r+w9tOm7n_GoZ78ffhKbF5LJqCqNg@mail.gmail.com>
+ <CACLjXaJCgjfYgWdLpftUyETNSEjtGs1HRg2tcodP=AojW+8Txg@mail.gmail.com>
+In-Reply-To: <CACLjXaJCgjfYgWdLpftUyETNSEjtGs1HRg2tcodP=AojW+8Txg@mail.gmail.com>
+From: Salah Eddine Admou <admou3@gmail.com>
+Date: Tue, 18 Jul 2023 14:35:09 +0100
+Message-ID: <CAAfpJWKEvuBrQqLBRk4HTzeUSSkVqLgB5td3Y2p5Li9d_xkpcQ@mail.gmail.com>
+Subject: Fwd: jour6
+To: mehdi.ab0549@gmail.com, sebbahifatimaezzahra5@gmail.com, 
+	ayoub908chater@gmail.com, a.jada95@gmail.com, chioukhoikhlass@gmail.com, 
+	y.ammani@edu.umi.ac.ma, mourad-haddoudi@hotmail.com, drissjabri57@gmail.com, 
+	abegig.ghizlane@gmail.com, aajli.ahmed@gmail.com, bouagnaayoub@gmail.com, 
+	salmaelbaciti7@gmail.com, yassinesdiri10@gmail.com, moaminehasni0@gmail.com, 
+	snikersmoodmoon@gmail.com, anibasoufiane2001@gmail.com, 
+	elouafisouhaila6@gmail.com, mouadhabtany@gmail.com, salmaelmokharek@gmail.com, 
+	anibamore3@gmail.com, yousseflehmam3@gmail.com, mharmohamedreda03@gmail.com, 
+	salwamounji5@gmail.com, oumaaz999@gmail.com, nouralouzi22@gmail.com, 
+	chaiberrasayaofficiel@gmail.com, eljalilihikmat@outlook.fr, 
+	assmaa.darouiche@gmail.com, elasriaminaa@gmail.com, 
+	elmehdisalahbensouda@hotmail.com, oumaimaakharraz999@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000008895d70600c2fc53"
+
+--0000000000008895d70600c2fc53
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+De : YASSINE AMMANI <y.ammani@edu.umi.ac.ma>
+Date: mar. 18 juil. 2023 =C3=A0 14:04
+Subject: Re: jour6
+To: Salah Eddine Admou <admou3@gmail.com>
+
+
+
+Yassine Ammani
+ Yassine_Ammani_jour6.zip
+<https://drive.google.com/file/d/1-jCiFESoYY4kKGTAR8Xs_zrF70K00rnY/view?usp=
+=3Ddrive_web>
+
+
+On Tue, Jul 18, 2023 at 11:28=E2=80=AFAM Salah Eddine Admou <admou3@gmail.c=
+om>
+wrote:
+
+>
+>
+
+--0000000000008895d70600c2fc53
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>De=C2=A0: <strong=
+ class=3D"gmail_sendername" dir=3D"auto">YASSINE AMMANI</strong> <span dir=
+=3D"auto">&lt;<a href=3D"mailto:y.ammani@edu.umi.ac.ma">y.ammani@edu.umi.ac=
+.ma</a>&gt;</span><br>Date: mar. 18 juil. 2023 =C3=A0=C2=A014:04<br>Subject=
+: Re: jour6<br>To: Salah Eddine Admou &lt;<a href=3D"mailto:admou3@gmail.co=
+m">admou3@gmail.com</a>&gt;<br></div><br><br><div dir=3D"ltr"><div><br></di=
+v>Yassine Ammani<div class=3D"gmail_chip gmail_drive_chip" style=3D"width:3=
+96px;height:18px;max-height:18px;background-color:rgb(245,245,245);padding:=
+5px;font-family:arial;font-weight:bold;font-size:13px;border:1px solid rgb(=
+221,221,221);line-height:1"><a href=3D"https://drive.google.com/file/d/1-jC=
+iFESoYY4kKGTAR8Xs_zrF70K00rnY/view?usp=3Ddrive_web" style=3D"display:inline=
+-block;max-width:366px;overflow:hidden;text-overflow:ellipsis;text-decorati=
+on-line:none;padding:1px 0px;border:none" aria-label=3D"Yassine_Ammani_jour=
+6.zip" target=3D"_blank"><img style=3D"vertical-align:bottom;border:none" s=
+rc=3D"https://ssl.gstatic.com/docs/doclist/images/icon_10_generic_list.png"=
+>=C2=A0<span dir=3D"ltr" style=3D"vertical-align:bottom;text-decoration:non=
+e">Yassine_Ammani_jour6.zip</span></a><img style=3D"opacity:0.55;float:righ=
+t;display:none"></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"=
+ltr" class=3D"gmail_attr">On Tue, Jul 18, 2023 at 11:28=E2=80=AFAM Salah Ed=
+dine Admou &lt;<a href=3D"mailto:admou3@gmail.com" target=3D"_blank">admou3=
+@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex"><div dir=3D"ltr"><br></div>
+</blockquote></div>
+</div></div>
+
+--0000000000008895d70600c2fc53--

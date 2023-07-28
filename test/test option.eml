@@ -1,0 +1,138 @@
+Delivered-To: yousseflehmam3@gmail.com
+Received: by 2002:a05:7022:1404:b0:68:2d08:b8b8 with SMTP id pd4csp4820205dlb;
+        Wed, 12 Jul 2023 02:45:54 -0700 (PDT)
+X-Received: by 2002:a1f:4590:0:b0:471:5144:e7af with SMTP id s138-20020a1f4590000000b004715144e7afmr8392365vka.1.1689155153838;
+        Wed, 12 Jul 2023 02:45:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1689155153; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JAOa5Ro5s7jksx0psH6F7UEsnBI4NI//9iNaAAEE58A8EZKgSZBsHbWJd3YR35Jxym
+         tOvsXEhdoexMhCKJjk2VJFKdQygZOHHnHGCATWp5Q4sZc354e1E5mUdILLpbAtJKv4WF
+         z/FUIj1/T1A30xp2zzfsMs8EUuOJRFppwSsXW4uXecuM2ugyyJuhjbI3lndRkd9hIbBP
+         aZPmoW8f7ds+oAtKgOjZbiTRIgcS7aJT9w2jRgm0UFKBdGnD12k6ZU9axzJDChPSAVVF
+         3a1HehT0gPmqypQXUQOKn89ClhkitbAiWdpkjClKbhQc7UBZldBc4Dfbt3OLyuHLgWYQ
+         iTVQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=QWP7Pso5b2SRrX5ktaW77ayaEn3nHGef0M4JQ5+TX5o=;
+        fh=yMIPgLw1yAjvQyKDM/2lYUzOsPhQEbns4ocf960UuVM=;
+        b=TTZGvfOtczAoKWV+XsaU6w9KxGIy57lld94lWuMesVJyS7IarxhkaPhYXGPxzHYXgw
+         HISbjN0Tp3UhiLYi4JLfGi5j/dm8KbIXpIrdhnVhytL0qoTmvDyd7z0RzgQlQAd8tffj
+         noy/G10sUPJQN2q4+vDffmVPZmF1n5hwee3P1TnG6+A7fwmPcAMRYlyA8nDJkYGz1fsj
+         SCYfNNeR5eWxJG6kVSxwQGolMOssv7jywOe/q+s+qD3OrRCZXriYeo3FZJz3aKAZ1MF/
+         9NDdCQK3Xlp10lOTTbg4Ah8NBkdbqKPeFi2vfvqABaaLh4hLojMIEc0Nm2ac2ySjSJ0U
+         slsA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=IfzazQxi;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <admou3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id o185-20020a1f41c2000000b0047ebfb380b3sor637720vka.0.2023.07.12.02.45.53
+        (Google Transport Security);
+        Wed, 12 Jul 2023 02:45:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=IfzazQxi;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1689155152; x=1691747152;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=QWP7Pso5b2SRrX5ktaW77ayaEn3nHGef0M4JQ5+TX5o=;
+        b=IfzazQxijB7L5JOaIRznvct+kM1W6GqAg1c3nQg1iiiWv4tfCr+cM15rCs92cRnOX5
+         9toy4R6VjIpKxtCdtonGeL1iddG/ebmKKSYYQttJQqx0wxM8JU7bvdYsUVg0lyGmfCXL
+         xNmUIAoItuJZcNOeqGGwTCBGunvrbMem5a7e5/eyftNCzG0rDk4nv3lPAIEbrx33hm5a
+         Pj09cdnormUXgROQaPw7wx+7LAfB+kKtYyrX/rSep4z2TEhzTVO9lUXNayJWmv7r0gln
+         lGalcqE6af5bgIYjyBz3AQBqPFfEfksmejTb6paloZiTTGe+U+k+JoNz+d5qsAXinzvE
+         W1JQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1689155152; x=1691747152;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=QWP7Pso5b2SRrX5ktaW77ayaEn3nHGef0M4JQ5+TX5o=;
+        b=hpPB5b943+LR6qaQsLtIIS9QFrBzTK3WGWMBavcxGlOqg9FXnzFZNlTUdTyUhVIUDE
+         fVYcf/6SY7bXMogVbEm1lFNVtZQ9/+qdRz917MsHRzZILgahhmK/0S6vIltAHKo1GWuh
+         nWlgRlXYVQk7OD/a7SjUriIT6hAo4BQ1xLDyWKorsIMJa5nAuDEEoPt9lWJbdoRnKGMH
+         TSYK19vaGIHamY5UlBMufA+R8asUKEwb160d9LofZiBAcwaiCQ+H18SQ3YoZ4Wpc/825
+         XDffdPiYaGl2sukXOAMfpgesZVJHQSGtsNjUo902F6QpWWfTQAR2PgvrC8XvAvFWcxnq
+         2pJA==
+X-Gm-Message-State: ABy/qLaphuB6liJ9V+vdSPoPHx2k54jGqKbsVxfSIUIWrIDrbn/3OD0J
+	P2Bet03nsgXjgbFcj0JouBmPXKG364le5MIkUvybCEQg2KU=
+X-Google-Smtp-Source: APBJJlHOYTSgeDHV+gTNIW8skhQSYGy8u4j60zOQKSCB4B8DEfr8930+X8PuFPD7iIITUL6IRI8LliVNwUFvcPAyRns=
+X-Received: by 2002:a1f:bdce:0:b0:481:2c13:eabb with SMTP id
+ n197-20020a1fbdce000000b004812c13eabbmr1186668vkf.12.1689155152485; Wed, 12
+ Jul 2023 02:45:52 -0700 (PDT)
+MIME-Version: 1.0
+From: Salah Eddine Admou <admou3@gmail.com>
+Date: Wed, 12 Jul 2023 10:45:41 +0100
+Message-ID: <CAAfpJWLJne+YJG-PVMNmK_xf=s_SbYKPt=WajtKmFmoKr9EPBQ@mail.gmail.com>
+Subject: test option
+To: mehdi.ab0549@gmail.com, sebbahifatimaezzahra5@gmail.com, 
+	ayoub908chater@gmail.com, a.jada95@gmail.com, chioukhoikhlass@gmail.com, 
+	y.ammani@edu.umi.ac.ma, mourad-haddoudi@hotmail.com, drissjabri57@gmail.com, 
+	abegig.ghizlane@gmail.com, aajli.ahmed@gmail.com, bouagnaayoub@gmail.com, 
+	salmaelbaciti7@gmail.com, yassinesdiri10@gmail.com, moaminehasni0@gmail.com, 
+	snikersmoodmoon@gmail.com, anibasoufiane2001@gmail.com, 
+	elouafisouhaila6@gmail.com, mouadhabtany@gmail.com, salmaelmokharek@gmail.com, 
+	anibamore3@gmail.com, yousseflehmam3@gmail.com, mharmohamedreda03@gmail.com, 
+	salwamounji5@gmail.com, oumaaz999@gmail.com, nouralouzi22@gmail.com, 
+	chaiberrasayaofficiel@gmail.com, eljalilihikmat@outlook.fr, 
+	assmaa.darouiche@gmail.com, elasriaminaa@gmail.com, 
+	elmehdisalahbensouda@hotmail.com
+Content-Type: multipart/mixed; boundary="000000000000d5d66c0600471472"
+
+--000000000000d5d66c0600471472
+Content-Type: multipart/alternative; boundary="000000000000d5d6690600471470"
+
+--000000000000d5d6690600471470
+Content-Type: text/plain; charset="UTF-8"
+
+
+
+--000000000000d5d6690600471470
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><br></div>
+
+--000000000000d5d6690600471470--
+--000000000000d5d66c0600471472
+Content-Type: application/octet-stream; name="test.robot"
+Content-Disposition: attachment; filename="test.robot"
+Content-Transfer-Encoding: base64
+Content-ID: <f_ljzjcgli0>
+X-Attachment-Id: f_ljzjcgli0
+
+KioqIFNldHRpbmdzICoqKg0KRG9jdW1lbnRhdGlvbiAgICBUaGlzIGZpbGUgY29udGFpbnMgdGVz
+dCBjYXNlcyBmb3IgdGhlIGxvZ2luIGZ1bmN0aW9uYWxpdHkuDQpMaWJyYXJ5ICAgIFNlbGVuaXVt
+TGlicmFyeQ0KU3VpdGUgU2V0dXAgICAgT3BlbiBicm93c2VyICAgICR7dXJsfSAgICAke2Jyb3dz
+ZXJ9DQpTdWl0ZSBUZWFyZG93biAgICBDbG9zZSBicm93c2VyDQoNCioqKiBWYXJpYWJsZXMgKioq
+DQoke3VybH0gICAgaHR0cHM6Ly93d3cuanVtaWEubWEvDQoke2Jyb3dzZXJ9ICAgICBjaHJvbWUN
+CiR7ZW1haWx9ICAgICBmY2FhaXN1bGFyNzg0OTk4QG1hcmtldHN0b3JlLnB3DQoke3Bhc3N3b3Jk
+fSAgICBUZXN0MTIzQA0KJHtub219ICAgIHlhcw0KJHtwcmVub219ICAgIHlhc3NpbmUNCiR7dGVs
+fSAgICAwNzA4MzQ1Njc4DQoNCg0KKioqIEtleXdvcmRzICoqKg0KU2VhcmNoDQoNCiAgICBDbGlj
+ayBFbGVtZW50ICAgIC8vKltAaWQ9ImptIl0vaGVhZGVyL3NlY3Rpb24vZGl2WzJdL2RpdlsxXS9s
+YWJlbA0KICAgIFNsZWVwICAgIDJzDQogICAgQ2xpY2sgRWxlbWVudCAgICAvLypbQGlkPSJkcGR3
+LWxvZ2luLWJveCJdL2Rpdi9kaXYvYQ0KICAgIFNsZWVwICAgIDJzDQogICAgDQpMb2dpbiANCiAg
+ICBJbnB1dCBUZXh0ICAgIC8vKltAaWQ9ImlucHV0X2lkZW50aWZpZXJWYWx1ZSJdICAgICR7ZW1h
+aWx9DQogICAgU2xlZXAgICAgMnMNCiAgICBDbGljayBFbGVtZW50ICAgIC8vYnV0dG9uW3N0YXJ0
+cy13aXRoKEBjbGFzcywnbWRjLWJ1dHRvbicpXQ0KICAgIFNsZWVwICAgIDJzDQogICAgSW5wdXQg
+VGV4dCAgICAvL2lucHV0W3N0YXJ0cy13aXRoKEBjbGFzcywnbWRjLXRleHQnKV0gICAke3Bhc3N3
+b3JkfSAgICANCiAgICBDbGljayBFbGVtZW50ICAgIC8vYnV0dG9uW3N0YXJ0cy13aXRoKEBjbGFz
+cywnbWRjLWJ1dHRvbicpXQ0KICAgIFNsZWVwICAgIDAuNXMNCiAgICAjIFdhaXQgVW50aWwgUGFn
+ZSBDb250YWlucyAgICANCiAgICBDYXB0dXJlIFBhZ2UgU2NyZWVuc2hvdA0KICAgIFtUZWFyZG93
+bl0gICAgIyBUZWFyZG93biBzdGVwcyBnbyBoZXJlDQpMb2dpbiB3aXRoIEludmFsaWQgQ3JlZGVu
+dGlhbHMNCiAgICBJbnB1dCBUZXh0ICAgIC8vKltAaWQ9ImlucHV0X2lkZW50aWZpZXJWYWx1ZSJd
+ICAgICR7ZW1haWx9DQogICAgU2xlZXAgICAgMnMNCiAgICBDbGljayBFbGVtZW50ICAgIC8vYnV0
+dG9uW3N0YXJ0cy13aXRoKEBjbGFzcywnbWRjLWJ1dHRvbicpXQ0KICAgIFNsZWVwICAgIDJzDQog
+ICAgSW5wdXQgVGV4dCAgICAvL2lucHV0W3N0YXJ0cy13aXRoKEBjbGFzcywnbWRjLXRleHQnKV0g
+ICBtbm5tbm1uICANCiAgICBDbGljayBFbGVtZW50ICAgIC8vYnV0dG9uW3N0YXJ0cy13aXRoKEBj
+bGFzcywnbWRjLWJ1dHRvbicpXQ0KICAgIFNsZWVwICAgIDAuNXMNCiAgICBXYWl0IFVudGlsIFBh
+Z2UgQ29udGFpbnMgICBNb3QgZGUgcGFzc2UgaW5jb3JyZWN0LiBSw6llc3NheWV6IG91IGNsaXF1
+ZXogc3VyICJNb3QgZGUgcGFzc2Ugb3VibGnDqT8iIHBvdXIgbGUgcsOpaW5pdGlhbGlzZXIuIA0K
+ICAgIENhcHR1cmUgUGFnZSBTY3JlZW5zaG90DQogICAgW1RlYXJkb3duXSAgICAjIFRlYXJkb3du
+IHN0ZXBzIGdvIGhlcmUgICAgDQoqKiogVGVzdCBDYXNlcyAqKioNCkZpcnN0IFRlc3QNCiAgICBE
+b3VibGUgQ2xpY2sgRWxlbWVudCAgICAvLypbQGlkPSJqbSJdL2hlYWRlcg0KICAgICMgU2VhcmNo
+DQogICAgIyBMb2dpbg0KICAgIFNlYXJjaA0KICAgIExvZ2luIHdpdGggSW52YWxpZCBDcmVkZW50
+aWFscw0KIA==
+--000000000000d5d66c0600471472--
