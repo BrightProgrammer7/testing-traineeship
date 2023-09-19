@@ -1,0 +1,123 @@
+Delivered-To: yousseflehmam3@gmail.com
+Received: by 2002:a05:7022:e02:b0:68:6523:f8f7 with SMTP id dx2csp2361725dlb;
+        Tue, 18 Jul 2023 03:04:55 -0700 (PDT)
+X-Received: by 2002:a1f:5344:0:b0:481:479d:3370 with SMTP id h65-20020a1f5344000000b00481479d3370mr1038573vkb.10.1689674694956;
+        Tue, 18 Jul 2023 03:04:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1689674694; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Fc8PZ0IsZ+Y8TacPwKk0gExPnnMPW6BIJ8PiehRvjqo9foPyliCBN+H1yslkavvqI2
+         rYPO7WqLdbAEes9bq8dMbm2lzUpg0N3eLDVKg19YZ2ZraavcJSUAUJn7Oh5pbZgpQcS2
+         srHnicl8UBQn6B5/hVUZJ4/gp3Hsa1/f7NJ3QB7Q4xp48tlH+xpuxTd+m8pgZWbwQ8EB
+         Pl8u1fI+FW+h5lEmrP64qdM45+MV0CtxPuZpYYFxCLXqj0c36R7zQA4K57BeiJgw/C8R
+         86vNmIGyhJFIcMf6oQmkTuzNZJ2Ea/zBcNMSf3rhBqVCOFxlhEMwgAObI+JVQmfyFmv2
+         Vtjw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=it24NIXqZYIwBx/KDOqe1+bvQf6Q3GEE02VEBR5ohtw=;
+        fh=yMIPgLw1yAjvQyKDM/2lYUzOsPhQEbns4ocf960UuVM=;
+        b=NRMvaa/Tc1V4Q21bBy8r/Q7nzE8wmE0V7UVXX3il/ZvhAcGfcf4vAc+EPmwe4TUnqu
+         v+M6MTVaPgXAWmVL/OJmMU0ftxsKpwip2vFJUoj+e/iuqSI5OjT8foYH5LqcWIRr3XQK
+         2rYRmBd6sU0z4Efy3gFGwtqmqcBWjY5xPqVgCJAPnzMevLzQ11ridIW8NAvqk1KMlA06
+         5D12erBVqeYtw5WHfmvCMOATjtyI38Lkq7RaMaHnJUUMAm7SuchK8LZDAbKP6/xCSH1A
+         HQErL1dvmZFrHmykJiAFA1WosM5hkOEFwVR2J9eYnQfdbZj6AWktSm1aS/FhU4iaEBIW
+         ue1Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=LgncEnSF;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <admou3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u203-20020a1f60d4000000b004818127ccd6sor307806vkb.9.2023.07.18.03.04.54
+        (Google Transport Security);
+        Tue, 18 Jul 2023 03:04:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=LgncEnSF;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1689674694; x=1692266694;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=it24NIXqZYIwBx/KDOqe1+bvQf6Q3GEE02VEBR5ohtw=;
+        b=LgncEnSFQYpfN8joWYVB3FJloN0xDGDtVmx6GTUcDiGYbTWZxZZD8+QR+ZXeZ4j566
+         psu82l9SwW0V128wKdqL1CstASKE8xrqXv22djwif7oktmy0J1WQuCi7w3mXTdpWbSoc
+         lkK6toXxZtMktu0fgclzuyGmi8sT5wJu4nlyvpEAAUvEsQtwmMrmJWNEgrJU91DztV99
+         KDBWaZTEnOBOSGSM9cmF8CM0H3zWuLahDrecipwtTXab7yBtL1MrKTMONJlW9/JbCujL
+         8ZrId7j7ALYUCGgQ0TVmMbN2/1zroFbSqxHGe7laofI2TWjk6EDojinGMy1VeXWNnmoB
+         mbhQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1689674694; x=1692266694;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=it24NIXqZYIwBx/KDOqe1+bvQf6Q3GEE02VEBR5ohtw=;
+        b=NjtwtfKuC6cteuEkwYmpCWwkIIiBhkNOtvO2KlzeL3vrkDmokAWjbpEp7GI6UMMS/F
+         UYQQ3yGPHOD73rPRLo0XDfkVlCTClV8buNhZLphm27ivwr84lymOT8q26UDJSSZsNkuV
+         JCGQKdz90sqlgPBK7a9FrzShPmpbTQonjpUzCN8pzhZ463Q23YiGu0D97qLbXG8jSPF+
+         V0BC2b+Ad5cux8WSwuUhRPxul8DJ4LWdnn74XdoPoIp1bjBNNdwJrkJ3TwEdDq79DyTl
+         JZ+IeQFjWYV7YirtpK7btV8JfHmeonYquVb70VuW/htOSLutHqHm4zjCUOp8Ck+kD366
+         h2Bw==
+X-Gm-Message-State: ABy/qLZfTvlcVe1Br5L5ZHIswuP0EtJE8LHsiUYSjE8my84XQ7oxx1im
+	751pZZt9ew0W25XQcfhanAfq41NJXM1W9IQOHbH4gJVHeNdueQ==
+X-Google-Smtp-Source: APBJJlHH/S6dWcJVvsgCeDPZYNiEO2vZ6Znek1sOqOy/IooTXVIjifW1JSwptREgoQUjr0k0bZ5vXxz9ikWDuRHiPf8=
+X-Received: by 2002:a1f:4593:0:b0:471:304e:b563 with SMTP id
+ s141-20020a1f4593000000b00471304eb563mr1038923vka.8.1689674693720; Tue, 18
+ Jul 2023 03:04:53 -0700 (PDT)
+MIME-Version: 1.0
+From: Salah Eddine Admou <admou3@gmail.com>
+Date: Tue, 18 Jul 2023 11:04:42 +0100
+Message-ID: <CAAfpJWJnYwxj7S7skVTkZ12vqrsyXdZAB3dxDdASpJE1b1phUA@mail.gmail.com>
+Subject: jour6
+To: mehdi.ab0549@gmail.com, sebbahifatimaezzahra5@gmail.com, 
+	ayoub908chater@gmail.com, a.jada95@gmail.com, chioukhoikhlass@gmail.com, 
+	y.ammani@edu.umi.ac.ma, mourad-haddoudi@hotmail.com, drissjabri57@gmail.com, 
+	abegig.ghizlane@gmail.com, aajli.ahmed@gmail.com, bouagnaayoub@gmail.com, 
+	salmaelbaciti7@gmail.com, yassinesdiri10@gmail.com, moaminehasni0@gmail.com, 
+	snikersmoodmoon@gmail.com, anibasoufiane2001@gmail.com, 
+	elouafisouhaila6@gmail.com, mouadhabtany@gmail.com, salmaelmokharek@gmail.com, 
+	anibamore3@gmail.com, yousseflehmam3@gmail.com, mharmohamedreda03@gmail.com, 
+	salwamounji5@gmail.com, oumaaz999@gmail.com, nouralouzi22@gmail.com, 
+	chaiberrasayaofficiel@gmail.com, eljalilihikmat@outlook.fr, 
+	assmaa.darouiche@gmail.com, elasriaminaa@gmail.com, 
+	elmehdisalahbensouda@hotmail.com
+Content-Type: multipart/mixed; boundary="000000000000e7dd430600c00b32"
+
+--000000000000e7dd430600c00b32
+Content-Type: multipart/alternative; boundary="000000000000e7dd410600c00b30"
+
+--000000000000e7dd410600c00b30
+Content-Type: text/plain; charset="UTF-8"
+
+
+
+--000000000000e7dd410600c00b30
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><br></div>
+
+--000000000000e7dd410600c00b30--
+--000000000000e7dd430600c00b32
+Content-Type: application/octet-stream; name="test1.robot"
+Content-Disposition: attachment; filename="test1.robot"
+Content-Transfer-Encoding: base64
+Content-ID: <f_lk84of6a1>
+X-Attachment-Id: f_lk84of6a1
+
+KioqIFNldHRpbmdzICoqKg0KTGlicmFyeSAgICAgICAgICBTZWxlbml1bUxpYnJhcnkNCg0KKioq
+IFZhcmlhYmxlcyAqKioNCkB7bGlzdH0gICAgICAgICAgaXRlbTEgICAgaXRlbTIgICAgaXRlbTMN
+Cg0KKioqIEtleXdvcmRzICoqKg0KRXhhbXBsZSBUZXN0DQogICAgRk9SICAgICR7aXRlbX0gICAg
+SU4gICAgQHtsaXN0fQ0KICAgICAgICBMb2cgICAgJHtpdGVtfQ0KICAgICAgICAjIFBlcmZvcm0g
+b3RoZXIgYWN0aW9ucyBvbiAke2l0ZW19DQogICAgRU5EDQoNCioqKiBUZXN0IENhc2VzICoqKg0K
+VGVzdA0KICAgIEV4YW1wbGUgVGVzdA0K
+--000000000000e7dd430600c00b32
+Content-Type: application/octet-stream; name="test.robot"
+Content-Disposition: attachment; filename="test.robot"
+Content-Transfer-Encoding: base64
+Content-ID: <f_lk84of5y0>
+X-Attachment-Id: f_lk84of5y0
+
+KioqIFNldHRpbmdzICoqKg0KTGlicmFyeSAgICAgICAgICBTZWxlbml1bUxpYnJhcnkNCkxpYnJh
+cnkgICAgICAgICAgVGVzdFN1aXRlMi5yb2JvdA0KDQoqKiogVmFyaWFibGVzICoqKg0KQHtsaXN0
+fSAgICAgICAgICBpdGVtMSAgICBpdGVtMiAgICBpdGVtMw0KDQoqKiogVGVzdCBDYXNlcyAqKioN
+CkV4YW1wbGUNCiAgICBSdW4gS2V5d29yZCBUZXN0ICAgIEV4YW1wbGUgVGVzdA0K
+--000000000000e7dd430600c00b32--

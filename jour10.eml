@@ -1,0 +1,160 @@
+Delivered-To: yousseflehmam3@gmail.com
+Received: by 2002:a05:7022:388f:b0:68:6523:f8f7 with SMTP id pm15csp106793dlb;
+        Tue, 25 Jul 2023 02:29:04 -0700 (PDT)
+X-Received: by 2002:a1f:e0c2:0:b0:486:3dad:55e5 with SMTP id x185-20020a1fe0c2000000b004863dad55e5mr292305vkg.10.1690277343928;
+        Tue, 25 Jul 2023 02:29:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1690277343; cv=none;
+        d=google.com; s=arc-20160816;
+        b=t557WbJx79Yyi1RCUJeSNBMKcARm3vyK1I2JbQjdUinKPGCHQcieRbBjVIxD2s7Qy6
+         auWO7AdqKCflLRvPZ5g+V2LJTCYmbDqwVLdHpwsoVslDqIB2XFOv65y8G1N4WRyjJKBH
+         grnWHt9qgAEmhQVGpJn1NgVpSZVwaazTnYa1P71V2y3j+R0SHNwLVpe6h185h2yS9XJw
+         iTMWnLwwcpckRiV5Fji1cFIDLXljY2fPEp0cKkASnWMDhbeskdWtlJ8Ouu8fsPxMc1O/
+         /c4kPbfpc89Y8lpwwrdVJS2oXYzAoCh+ij3mzy8mYa/Ld17qamQViXX4jWBxXjLwJfOr
+         CQcA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=gx4w5ifX59K1fefGlzi36Lw7SH9QzuTX9ftsM9ZNI0I=;
+        fh=OtxOjaLrvPW+NqswzBBa1BfRCWAk7kiXiRUc/k2Oql4=;
+        b=Bb5kKqe+NIkihVZd5p57Q7TtMT0vtn28wKbIOOCl0+/1fQNlMGd/Zov5eU0j2J527V
+         E1sCXuxbXwRBDcxl1y49ICOk9pMs9YPkeM8E42DwWtnPyheIyXTuwuXCGcXiUQ2qjPIB
+         j3yuvT04TanFy2l6hNFPmW1GnYwr31GYprzwLxM/sWcVswEXZoMjSNGacdYMDgfK/1+T
+         ALYdxNAfVE0kaiYPQSKSWD+CbwgKw65n4Z8w2okng37r3pk9+MFgvImgQwk8Vy4Mw2eb
+         iQwesb8Ycqpj5HcqqpVSveTGLqzEaAQ2ArpmXvZ5bjQbcVx74zEmgKS8YmdA5CJsYkC1
+         hC5Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=ewQou5o7;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <admou3@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s142-20020a1f4594000000b0048140908817sor1275717vka.4.2023.07.25.02.29.03
+        (Google Transport Security);
+        Tue, 25 Jul 2023 02:29:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=ewQou5o7;
+       spf=pass (google.com: domain of admou3@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=admou3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1690277343; x=1690882143;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=gx4w5ifX59K1fefGlzi36Lw7SH9QzuTX9ftsM9ZNI0I=;
+        b=ewQou5o7BiyJVdPOJpJ+VlFIbKagzOOTSZB4c1A1P08VAZy1em6WIIqbtpBKzKEXcY
+         2hRg9v2+FzeTu6aMh4lmgwfGVwyl6rzlSGbsrNAT7vrA9iYCTSvfcKFDOr+rFM7q9555
+         AvAYVQTw+qnSgNcaxmf4fe5/kaHpb+hkDzW4qfoQwhcQOZEu9mCkHWRaZeAS/MSjabEd
+         MfPcJXPw7/7wj5B2meeL/6keW+DNog7YgXww1nWn24iWJ80pR92SYizjz5Jt44qeMH3U
+         CA3eFs9+NLDrASSSQy929qJXFrHWCuggBY95PzZh5n5aebd3HiqL1XeHEcwI3/4LO/lx
+         7IrA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1690277343; x=1690882143;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=gx4w5ifX59K1fefGlzi36Lw7SH9QzuTX9ftsM9ZNI0I=;
+        b=FLyUAoY3uuSY2TkXK78bgQk5wqajGzNn2HgQ+MpKtPJhZCdCow7gVcch6vCrNcmXlN
+         /qgghNhGCApllBKFmxl4UPURrvOf9HrRmjX55as3G667Z4w7ChILOWFg7q8KWoWdTx0T
+         PPvG/H2o7P0l/xWKpFvu39rStrBQmF6yWS2ZgUauCbLWGo1XTJCrLBmMqI8D3xQAtjad
+         ViM+lc8ynrJM6tbv4gHlSVZrgq0pBuPAvYyXhgsYZNsnOkhm6wRW2bIc4rrXfJtuGq3c
+         ssim/keG/Tl9keD2FSXJpHae7F4QPqwodeFjpm7nNgfPiJ/objQ1rOI330qArP4nDtHk
+         oIVg==
+X-Gm-Message-State: ABy/qLZPPxfWRyrmMAjr3UBK3MCSZg2VFwOzcdCB2KlKTUQJ4I/FvRBU
+	ij+czNI/qzEB9/Ue8xbAZGiV8Rr8fZ4K4LwYs2QEVy5+nTr4TQ==
+X-Google-Smtp-Source: APBJJlGlXjPwX3oDUkOvq4Fd2DPcDOzEa5NhNrTyAq9UB8C3hGS6AksoWTjjnxikxlopt2NWPRW6OS5SVhDBKDJnKHM=
+X-Received: by 2002:a1f:4196:0:b0:471:304e:b563 with SMTP id
+ o144-20020a1f4196000000b00471304eb563mr5405620vka.8.1690277342720; Tue, 25
+ Jul 2023 02:29:02 -0700 (PDT)
+MIME-Version: 1.0
+From: Salah Eddine Admou <admou3@gmail.com>
+Date: Tue, 25 Jul 2023 10:28:51 +0100
+Message-ID: <CAAfpJW+E+c015CDASDtyxDHaZLrSpYJfWJefgEnhhM-XKix=iQ@mail.gmail.com>
+Subject: jour10
+To: mehdi.ab0549@gmail.com, sebbahifatimaezzahra5@gmail.com, 
+	ayoub908chater@gmail.com, a.jada95@gmail.com, chioukhoikhlass@gmail.com, 
+	y.ammani@edu.umi.ac.ma, mourad-haddoudi@hotmail.com, drissjabri57@gmail.com, 
+	abegig.ghizlane@gmail.com, aajli.ahmed@gmail.com, bouagnaayoub@gmail.com, 
+	salmaelbaciti7@gmail.com, yassinesdiri10@gmail.com, moaminehasni0@gmail.com, 
+	snikersmoodmoon@gmail.com, anibasoufiane2001@gmail.com, 
+	elouafisouhaila6@gmail.com, mouadhabtany@gmail.com, salmaelmokharek@gmail.com, 
+	anibamore3@gmail.com, yousseflehmam3@gmail.com, mharmohamedreda03@gmail.com, 
+	salwamounji5@gmail.com, oumaimaakharraz999@gmail.com, nouralouzi22@gmail.com, 
+	chaiberrasayaofficiel@gmail.com, eljalilihikmat@outlook.fr, 
+	assmaa.darouiche@gmail.com, elasriaminaa@gmail.com, 
+	elmehdisalahbensouda@hotmail.com
+Content-Type: multipart/mixed; boundary="00000000000095cbda06014c5c44"
+
+--00000000000095cbda06014c5c44
+Content-Type: multipart/alternative; boundary="00000000000095cbd706014c5c42"
+
+--00000000000095cbd706014c5c42
+Content-Type: text/plain; charset="UTF-8"
+
+
+
+--00000000000095cbd706014c5c42
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><br></div>
+
+--00000000000095cbd706014c5c42--
+--00000000000095cbda06014c5c44
+Content-Type: application/octet-stream; name="mov.robot"
+Content-Disposition: attachment; filename="mov.robot"
+Content-Transfer-Encoding: base64
+Content-ID: <f_lki3haij0>
+X-Attachment-Id: f_lki3haij0
+
+KioqIFNldHRpbmdzICoqKg0KTGlicmFyeSAgICAgUmVxdWVzdHNMaWJyYXJ5DQpMaWJyYXJ5ICAg
+ICBDb2xsZWN0aW9ucw0KTGlicmFyeSAgICAgQnVpbHRJbg0KDQoqKiogVmFyaWFibGVzICoqKg0K
+JHtCQVNFX1VSTH0gICAgaHR0cHM6Ly9tb3ZpZXNkYXRhYmFzZS5wLnJhcGlkYXBpLmNvbS90aXRs
+ZXMNCiR7SEVBREVSU30gICAgWC1SYXBpZEFQSS1LZXk6NmZjNDM2MzM4MW1zaGNjYzkzOGM1MzAw
+ZTgzMXAxYTJkNGNqc25jMDlkYzZkMmE0MTEgICAgWC1SYXBpZEFQSS1Ib3N0Om1vdmllc2RhdGFi
+YXNlLnAucmFwaWRhcGkuY29tDQoNCioqKiBUZXN0IENhc2VzICoqKg0KVGVzdCBBUEkgUmVxdWVz
+dA0KICAgIENyZWF0ZSBTZXNzaW9uICAgIG1vdmllcyAgICAke0JBU0VfVVJMfQ0KICAgICZ7aGVh
+ZGVyc30gICAgQ3JlYXRlIERpY3Rpb25hcnkgICAgWC1SYXBpZEFQSS1LZXkgICAgNmZjNDM2MzM4
+MW1zaGNjYzkzOGM1MzAwZTgzMXAxYTJkNGNqc25jMDlkYzZkMmE0MTEgICAgWC1SYXBpZEFQSS1I
+b3N0ICAgIG1vdmllc2RhdGFiYXNlLnAucmFwaWRhcGkuY29tDQogICAgJHtyZXNwb25zZX0gICAg
+R0VUIE9uIFNlc3Npb24gICAgbW92aWVzICAgIC8gICAgaGVhZGVycz0ke2hlYWRlcnN9ICAgIHZl
+cmlmeT0ke1RydWV9DQogICAgU2hvdWxkIEJlIEVxdWFsICAgICR7cmVzcG9uc2Uuc3RhdHVzX2Nv
+ZGV9ICAgIDIwMA0KICAgIExvZyAgICBSZXNwb25zZTogJHtyZXNwb25zZS50ZXh0fQ0KICAgICR7
+bW92aWVzfSAgICBTZXQgVmFyaWFibGUgICAgJHtyZXNwb25zZS5qc29uKClbInJlc3VsdHMiXX0g
+ICAjIEV4dHJhY3QgJ3Jlc3VsdHMnIGxpc3Qgb2YgbW92aWVzDQoNCiAgICAjIFRlc3QgY2FzZXMg
+Zm9yIHRoZSBtb3ZpZSBsaXN0DQogICAgVGVzdCBNb3ZpZSBMaXN0IENvbnRhaW5zIE1vdmllcyAg
+ICAke21vdmllc30NCiAgICBUZXN0IE1vdmllIExpc3QgQXR0cmlidXRlcyAgICAke21vdmllc30N
+Cg0KKioqIEtleXdvcmRzICoqKg0KU2hvdWxkIEJlIEVxdWFsDQogICAgW0FyZ3VtZW50c10gICAg
+JHthY3R1YWx9ICAgICR7ZXhwZWN0ZWR9DQogICAgU2hvdWxkIEJlIEVxdWFsIEFzIEludGVnZXJz
+ICAgICR7YWN0dWFsfSAgICAke2V4cGVjdGVkfQ0KDQpUZXN0IE1vdmllIExpc3QgQ29udGFpbnMg
+TW92aWVzDQogICAgW0FyZ3VtZW50c10gICAgJHttb3ZpZXN9DQogICAgU2hvdWxkIE5vdCBCZSBF
+bXB0eSAgICAke21vdmllc30NCiAgICAke21vdmllX2NvdW50fSAgICBHZXQgTGVuZ3RoICAgICR7
+bW92aWVzfQ0KICAgIExvZyAgICBUaGVyZSBhcmUgJHttb3ZpZV9jb3VudH0gbW92aWVzIGluIHRo
+ZSBsaXN0Lg0KDQpUZXN0IE1vdmllIExpc3QgQXR0cmlidXRlcw0KICAgIFtBcmd1bWVudHNdICAg
+ICR7bW92aWVzfQ0KICAgIEZPUiAgICAke21vdmllfSAgICBJTiAgICBAe21vdmllc30NCiAgICAg
+ICAgJHtpc190aXRsZV9wcmVzZW50fSAgICBSdW4gS2V5d29yZCBBbmQgUmV0dXJuIFN0YXR1cyAg
+ICBEaWN0aW9uYXJ5IFNob3VsZCBDb250YWluIEtleSAgICAke21vdmllfSAgICB0aXRsZQ0KICAg
+ICAgICAke2lzX2dlbnJlX3ByZXNlbnR9ICAgIFJ1biBLZXl3b3JkIEFuZCBSZXR1cm4gU3RhdHVz
+ICAgIERpY3Rpb25hcnkgU2hvdWxkIENvbnRhaW4gS2V5ICAgICR7bW92aWV9ICAgIGdlbnJlDQog
+ICAgICAgIExvZyAgICBNb3ZpZSBUaXRsZTogJHttb3ZpZVsidGl0bGVUZXh0Il1bInRleHQiXX0N
+CiAgICAgICAgTG9nICAgIEdlbnJlOiAke21vdmllWyJ0aXRsZVR5cGUiXVsidGV4dCJdfQ0KDQog
+ICAgRU5EDQo=
+--00000000000095cbda06014c5c44
+Content-Type: application/octet-stream; name="movies.robot"
+Content-Disposition: attachment; filename="movies.robot"
+Content-Transfer-Encoding: base64
+Content-ID: <f_lki3haiy1>
+X-Attachment-Id: f_lki3haiy1
+
+KioqIFNldHRpbmdzICoqKg0KDQpMaWJyYXJ5ICAgICBSZXF1ZXN0c0xpYnJhcnkNCg0KKioqIFZh
+cmlhYmxlcyAqKioNCiR7QkFTRV9VUkx9ICAgIGh0dHBzOi8vbW92aWVzZGF0YWJhc2UucC5yYXBp
+ZGFwaS5jb20vdGl0bGVzDQoke0hFQURFUlN9ICAgIFgtUmFwaWRBUEktS2V5OjZmYzQzNjMzODFt
+c2hjY2M5MzhjNTMwMGU4MzFwMWEyZDRjanNuYzA5ZGM2ZDJhNDExICAgIFgtUmFwaWRBUEktSG9z
+dDptb3ZpZXNkYXRhYmFzZS5wLnJhcGlkYXBpLmNvbQ0KDQoqKiogVGVzdCBDYXNlcyAqKioNClRl
+c3QgQVBJIFJlcXVlc3QNCiAgICBDcmVhdGUgU2Vzc2lvbiAgICBtb3ZpZXMgICAgJHtCQVNFX1VS
+TH0NCiAgICAme2hlYWRlcnN9ICAgIENyZWF0ZSBEaWN0aW9uYXJ5ICAgIFgtUmFwaWRBUEktS2V5
+ICAgIDZmYzQzNjMzODFtc2hjY2M5MzhjNTMwMGU4MzFwMWEyZDRjanNuYzA5ZGM2ZDJhNDExICAg
+IFgtUmFwaWRBUEktSG9zdCAgICBtb3ZpZXNkYXRhYmFzZS5wLnJhcGlkYXBpLmNvbQ0KICAgICR7
+cmVzcG9uc2V9ICAgIEdFVCBPbiBTZXNzaW9uICAgIG1vdmllcyAgICAvICAgIGhlYWRlcnM9JHto
+ZWFkZXJzfSAgICB2ZXJpZnk9JHtUcnVlfQ0KICAgIFNob3VsZCBCZSBFcXVhbCAgICAke3Jlc3Bv
+bnNlLnN0YXR1c19jb2RlfSAgICAyMDANCiAgICBMb2cgICAgUmVzcG9uc2U6ICR7cmVzcG9uc2Uu
+dGV4dH0NCg0KKioqIEtleXdvcmRzICoqKg0KU2hvdWxkIEJlIEVxdWFsDQogICAgW0FyZ3VtZW50
+c10gICAgJHthY3R1YWx9ICAgICR7ZXhwZWN0ZWR9DQogICAgU2hvdWxkIEJlIEVxdWFsIEFzIElu
+dGVnZXJzICAgICR7YWN0dWFsfSAgICAke2V4cGVjdGVkfQ0K
+--00000000000095cbda06014c5c44--
